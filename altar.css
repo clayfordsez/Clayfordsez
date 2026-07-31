@@ -1,0 +1,119 @@
+/* Project-specific additions for music-altar.html.
+   This file is intentionally layered after the site's existing style.css. */
+
+.project-hero,
+.wide-figure,
+.photo-grid figure{
+  margin:0;
+}
+
+.project-hero{
+  padding:2.2em 3em 0 3em;
+}
+
+.project-hero img,
+.wide-figure img,
+.photo-grid img{
+  display:block;
+  width:100%;
+  height:auto;
+  border:1px solid var(--rule);
+  background:var(--paper);
+}
+
+.project-hero img{
+  max-height:760px;
+  object-fit:cover;
+  object-position:center 47%;
+  border-top:4px solid var(--copper);
+}
+
+.project-hero figcaption,
+.wide-figure figcaption,
+.photo-grid figcaption{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72em;
+  line-height:1.45;
+  color:var(--ink-soft);
+  padding:0.7em 0 0 0;
+}
+
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:1.25em;
+  margin-top:1.5em;
+}
+
+.photo-grid img{
+  aspect-ratio:3 / 4;
+  object-fit:cover;
+}
+
+.wide-figure{
+  margin-top:1.4em;
+}
+
+.wide-figure img{
+  aspect-ratio:4 / 3;
+  object-fit:cover;
+}
+
+.fact-grid{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0,1fr));
+  gap:1px;
+  margin-top:1.6em;
+  border:1px solid var(--rule);
+  background:var(--rule);
+}
+
+.fact{
+  background:var(--paper);
+  padding:0.9em 1em;
+}
+
+.fact-label{
+  display:block;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.67em;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--blueprint-dim);
+  margin-bottom:0.25em;
+}
+
+.fact strong{
+  display:block;
+  font-family:'Source Serif 4', Georgia, serif;
+  font-size:1.05em;
+}
+
+.altar-quote{
+  font-family:'Source Serif 4', Georgia, serif;
+  font-size:1.15em;
+  font-style:italic;
+  border-left-color:var(--copper);
+  background:rgba(163,75,38,0.06);
+}
+
+@media (max-width:720px){
+  .fact-grid{
+    grid-template-columns:repeat(2, minmax(0,1fr));
+  }
+}
+
+@media (max-width:600px){
+  .project-hero{
+    padding-left:1.3em;
+    padding-right:1.3em;
+  }
+
+  .photo-grid{
+    grid-template-columns:1fr;
+  }
+
+  .project-hero img{
+    max-height:none;
+  }
+}
