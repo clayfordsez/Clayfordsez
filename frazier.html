@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frazier Mark VI-A — Bench Log</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="site-header">
+  <a class="brand" href="index.html">Bench Log</a>
+  <nav><a href="index.html">All Projects</a></nav>
+</div>
+
+<div class="sheet">
+
+  <header class="title-block">
+    <p class="eyebrow">Build Log · Vintage Speaker</p>
+    <h1>Frazier Mark VI-A</h1>
+    <dl class="subtitle">
+      <div><dt>Acquired</dt><dd>2026, $100 for the pair</dd></div>
+      <div><dt>Config</dt><dd>12" woofer, 8" sealed full-range mid, 3×7 compression horn + piezo super horn</dd></div>
+      <div><dt>Spec</dt><dd>97dB/1W/1m, 30W RMS, 8Ω</dd></div>
+      <div><dt>Status</dt><dd>Diagnosing — queued behind Rectilinear work</dd></div>
+    </dl>
+  </header>
+
+  <nav class="toc">
+    <a href="#condition">Condition</a>
+    <a href="#issues">Known Issues</a>
+    <a href="#spec">Factory Spec</a>
+    <a href="#open">Open Items</a>
+  </nav>
+
+  <section id="condition">
+    <h2><span class="num">01</span> Condition on Arrival</h2>
+    <div class="finding">Cabinets rough but intact; sound phenomenal already, straight out of the box.</div>
+    <div class="finding">Seller confirmed via message before purchase: all crossover caps replaced a few years ago, speakers used daily until about two months before the sale, all drivers work. Terminal posts loose in the wood and some plastic missing at the terminal cup — cosmetic/mechanical annoyance, still makes good contact.</div>
+    <div class="finding">Serial numbers: <span class="val">No. 55895</span> and <span class="val">No. 55878</span>.</div>
+    <div class="callout">Learned from a Frazier Users Group admin that the rear-panel level-control pots were a <em>dealer-requested sales feature</em>, not part of the factory design — wide open (pots removed/bypassed) is the actual factory spec, and many owners remove them entirely. On at least one of this pair, the pots have already been disconnected and removed — confirmed by two blank bolt holes visible in the seller's listing photos where they used to mount.</div>
+  </section>
+
+  <section id="issues">
+    <h2><span class="num">02</span> Known Issues</h2>
+    <h3>Tweeter buzz <span class="tag open">undiagnosed</span></h3>
+    <div class="finding">Most obvious during the crescendo in "How to Disappear Completely" by Radiohead.</div>
+
+    <h3>Runaway woofer <span class="tag open">undiagnosed</span></h3>
+    <div class="finding">One woofer resonates uncontrollably once volume passes a certain threshold — the oscillation escalates once it starts, to the point of needing to physically get up and cut the volume.</div>
+
+    <div class="callout warn">Since the seller's caps are recent, a fresh recap probably isn't the fix here — this points toward a driver or mechanical issue rather than aged crossover components. Plan is to open up the problem woofer directly once bandwidth allows.</div>
+  </section>
+
+  <section id="spec">
+    <h2><span class="num">03</span> Factory Spec (on file)</h2>
+    <div class="finding"><strong>Low frequency:</strong> 12" driver, 8lb Alnico V magnet, 2.5" voice coil.</div>
+    <div class="finding"><strong>Mid:</strong> 8" full-range driver, isolated in its own sealed sub-enclosure.</div>
+    <div class="finding"><strong>High:</strong> 3×7 compression horn + direct-coupled piezo super horn.</div>
+    <div class="finding"><strong>Crossover:</strong> series-parallel, 12dB/octave, air-core inductors (#15 copper wire), polycarbonate + metalized mylar caps. Crossover points at <span class="val">600Hz</span> and <span class="val">3000Hz–4000Hz</span>.</div>
+    <div class="finding"><strong>Cabinet:</strong> 29.25" × 25.75" × 16", rear-ported ("tuning slots"), intended to sit 1–3" from a reflective surface behind them.</div>
+    <div class="finding">Per a Frazier Users Group contributor, the version with one piezo tweeter and one 3×7 horn uses a <span class="val">3.0mH</span> coil paired with a <span class="val">24µF</span> cap, and a <span class="val">0.39mH</span> coil paired with a <span class="val">3µF</span> cap.</div>
+    <div class="finding">For reference, the seller's own recapped pair used two "PB-MKP-FC" film caps (24µF and ~6.2µF, both 400V, made in France) mounted on a Frazier-branded crossover box directly on the woofer basket, alongside an air-core coil.</div>
+  </section>
+
+  <section id="open">
+    <h2><span class="num">04</span> Open Items</h2>
+    <ul class="open-items">
+      <li>Diagnose the tweeter buzz (piezo super horn or 3×7 compression horn — not yet isolated)</li>
+      <li>Open up and diagnose the runaway/resonating woofer</li>
+      <li>Source a parts supplier for the drivers, in case replacement becomes necessary (asked the Frazier Users Group, no answer yet)</li>
+      <li>Decide whether to reinstall level-control pots or leave the design in its factory wide-open state</li>
+    </ul>
+  </section>
+
+  <footer>Frazier Mark VI-A · part of Bench Log</footer>
+
+</div>
+</body>
+</html>
