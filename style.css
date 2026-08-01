@@ -155,6 +155,7 @@ h3 .tag{
 .tag.resolved{ background:rgba(60,107,74,0.14); color:var(--ok); }
 .tag.open{ background:rgba(163,75,38,0.14); color:var(--copper); }
 .tag.decided{ background:rgba(44,74,110,0.14); color:var(--blueprint); }
+.tag.leading{ background:rgba(199,122,80,0.18); color:var(--copper); }
 .tag.paused{ background:rgba(138,122,74,0.16); color:var(--paused); }
 
 p{ margin:0 0 0.9em 0; }
@@ -214,8 +215,12 @@ td{
   vertical-align:top;
 }
 tr.chosen td{ background:rgba(60,107,74,0.09); font-weight:600; }
+tr.leading td{ background:rgba(199,122,80,0.13); font-weight:600; }
+tr.alternative td{ background:rgba(44,74,110,0.06); }
 tr.rejected td{ color:var(--ink-soft); }
 .verdict-chosen{ color:var(--ok); font-weight:700; }
+.verdict-leading{ color:var(--copper); font-weight:700; }
+.verdict-alternative{ color:var(--blueprint-dim); font-weight:600; }
 .verdict-rejected{ color:var(--copper); font-weight:700; }
 
 .callout{

@@ -21,7 +21,7 @@
     <dl class="subtitle">
       <div><dt>Speaker</dt><dd>Rectilinear III "Lowboy," 1969</dd></div>
       <div><dt>Amp</dt><dd>Yamaha CR-800 (1977), 45W/ch @ 8Ω</dd></div>
-      <div><dt>Config</dt><dd>3-way: 12" woofer, 5" whizzer mid, 4× cone tweeters (2× 2", 2× 2.5")</dd></div>
+      <div><dt>Config</dt><dd>3-way: 12" woofer, 5" whizzer mid, 4× cone tweeters (2× 1⅞" cutout, 2× 2.5" cutout)</dd></div>
       <div><dt>Status</dt><dd>Paused — right channel harness rebuilt, left channel pending</dd></div>
     </dl>
   </header>
@@ -111,18 +111,35 @@
     <h2><span class="num">04</span> Tweeter Replacement — Options Considered</h2>
     <p>Originals identified as <strong>Peerless MT-20</strong> (2" super tweeter) and <strong>Peerless MT-25</strong> (2.5" main tweeter) — Danish manufacturer, matching the "Made in Denmark" stamp on the original housings, confirmed via a forum thread naming this exact family as used in Rectilinear speakers by name.</p>
     <div class="callout">Calculated design crossover point for the tweeter branch: <span class="val">~10kHz</span>, from the 2.0µF coupling cap into the ~8Ω branch impedance (<code>f ≈ 1/(2πRC)</code>). Used throughout as the benchmark against each candidate's Fs and recommended minimum crossover.</div>
+    <div class="callout">Measured original baffle cutouts directly: super tweeter position is <span class="val">1⅞" (47.6mm)</span> — smaller than the "2 inch" nominal class name the MT-20 is sold under. Main tweeter position measures <span class="val">2.5" (63.5mm)</span> exactly. All cutout comparisons below are against these real measurements, not the rounded nominal sizes.</div>
 
     <table>
-      <caption>Candidates evaluated</caption>
-      <thead><tr><th>Part</th><th>Ω</th><th>Sensitivity</th><th>Fs / min. Xover</th><th>Cutout</th><th>Verdict</th></tr></thead>
+      <caption>Candidates evaluated — nothing selected yet</caption>
+      <thead><tr><th>Part</th><th>Ω</th><th>Sensitivity</th><th>Fs / min. Xover</th><th>Cutout</th><th>Status</th></tr></thead>
       <tbody>
-        <tr class="chosen">
-          <td><strong>Vifa / Peerless D19TD05-08</strong></td>
+        <tr class="leading">
+          <td><strong>Visaton TW70-8</strong> (main position)</td>
+          <td>8Ω</td>
+          <td>90dB</td>
+          <td>Fs 1500Hz · min. xover 3000Hz</td>
+          <td>64mm vs. real 63.5mm hole — <em>near-exact</em></td>
+          <td class="verdict-leading">Leading</td>
+        </tr>
+        <tr class="leading">
+          <td><strong>Visaton TW6NG8</strong> (super position)</td>
+          <td>8Ω</td>
+          <td>91dB</td>
+          <td>Fs 1500Hz · min. xover 3000Hz</td>
+          <td>56mm vs. real 47.6mm hole — needs enlarging</td>
+          <td class="verdict-leading">Leading</td>
+        </tr>
+        <tr class="alternative">
+          <td>Vifa / Peerless D19TD05-08</td>
           <td>8Ω</td>
           <td>87.5dB — closest match to original ~88.5dB</td>
           <td>Fs 1687Hz</td>
           <td>70mm — needs enlarging</td>
-          <td class="verdict-chosen">Chosen</td>
+          <td class="verdict-alternative">Alternative</td>
         </tr>
         <tr class="rejected">
           <td>Dayton DC28F-8</td>
@@ -137,15 +154,7 @@
           <td>8Ω</td>
           <td>91dB</td>
           <td>Min. xover 3000Hz</td>
-          <td>50mm — <em>fits original hole</em></td>
-          <td class="verdict-rejected">Passed over</td>
-        </tr>
-        <tr class="rejected">
-          <td>Visaton TW6NG/8</td>
-          <td>8Ω</td>
-          <td>91dB</td>
-          <td>Min. xover ~5000Hz — least headroom</td>
-          <td>56mm — close fit</td>
+          <td>50mm — closest fit, still ~0.1" over the real 1⅞" hole</td>
           <td class="verdict-rejected">Passed over</td>
         </tr>
         <tr class="rejected">
@@ -166,16 +175,21 @@
         </tr>
       </tbody>
     </table>
+    <div class="callout">Fs and minimum crossover figures above come directly from Visaton's own datasheets (confirmed via uploaded PDFs), not third-party listings. Note the TW70/TW6NG minimum crossover corrects an earlier reading of this project's own notes — the datasheet's 5000Hz figure refers to the higher 80W power rating, not the minimum usable crossover point (that's the 3000Hz figure, tied to the base 40W rating).</div>
 
     <h3>Why each was passed over</h3>
     <div class="finding"><strong>Dayton DC28F-8</strong> — excellent spec match and the best Fs headroom of any option, but the largest required cutout and repeatedly back-ordered (Parts Express estimate: 8/14).</div>
-    <div class="finding"><strong>Ciare HT050-8</strong> — the best physical fit by far (fits the original 2" hole almost exactly, no enlargement needed) and genuinely cheap, but DIY-audio community sentiment on Ciare's <em>tweeters</em> specifically is mixed-to-negative, in contrast to more consistent praise for their woofers/mids.</div>
-    <div class="finding"><strong>Visaton TW6NG/8</strong> — second-best physical fit, good reviews from real owners (including specific use in retro-speaker DIY builds), but its recommended minimum crossover (~5kHz) leaves the least safety margin below the ~10kHz design point, and cone material is disputed between sources (one lists polymer fiber, another lists paper).</div>
+    <div class="finding"><strong>Ciare HT050-8</strong> — a strong physical fit (50mm against a real 1⅞" hole) and genuinely cheap, but DIY-audio community sentiment on Ciare's <em>tweeters</em> specifically is mixed-to-negative, in contrast to more consistent praise for their woofers/mids.</div>
     <div class="finding"><strong>Peerless CT-62</strong> — the most period-correct option and a genuinely live, active listing (99 sold, reputable seller) — but only available in 4Ω. Adding series resistance to compensate was considered but set aside as an imprecise fix without a verified target impedance to compensate against.</div>
     <div class="finding"><strong>Goldwood GT-25</strong> — ruled out outright: wrong size class (3.5" driver, 79mm cutout) and voiced for PA/DJ use, not hi-fi.</div>
 
-    <h3>Final choice: Vifa / Peerless D19TD05-08 <span class="tag decided">decided</span></h3>
-    <p>Chosen for the closest sensitivity match to the originals, the strongest pedigree of any candidate (Vifa and Peerless are sister Danish companies, now under the same parent group), and real 5-star reviews from owners describing actual vintage-speaker restorations. Requires baffle hole enlargement, same as the Dayton option would have. Initially in stock at Willys-Hifi (UK); has since gone back-ordered until <strong>8/21</strong>.</p>
+    <h3>Leading candidates: Visaton TW70-8 + TW6NG8 <span class="tag leading">leading — not yet decided</span></h3>
+    <p>A two-part combo, matching the original design's two-size architecture rather than one uniform driver across all 8 positions. Same manufacturer and product family for both, giving consistent voicing between positions. The TW70's cutout (64mm) is a near-exact match to the measured 63.5mm main-tweeter hole — the best physical fit found for either position across the whole search, likely needing little to no enlargement. The TW6NG still needs some enlargement on the smaller position. Both currently in stock at Parts Express, versus Vifa's back-order.</p>
+    <p>Genuinely open questions before committing: cone material isn't explicitly stated on either datasheet (same ambiguity that affected other candidates). The two parts use different terminal sizes (4.8mm vs. 2.8mm spades), so different connectors are needed for each. The frequency-response graphs on both datasheets haven't been closely cross-checked against each other or against the originals' likely curve — the numbers above come from the tabulated specs, not a curve-by-curve comparison.</p>
+
+    <h3>Remaining alternative: Vifa / Peerless D19TD05-08 <span class="tag decided">alternative</span></h3>
+    <p>Still a real option — closest sensitivity match to the originals (87.5dB vs. ~88.5dB) and the strongest brand pedigree (Vifa and Peerless are sister Danish companies, now under the same parent group), with real 5-star reviews from owners describing actual vintage-speaker restorations. Downside: larger cutout (70mm) than the Visaton combo needs on either position, and currently back-ordered until <strong>8/21</strong> versus the Visaton parts' in-stock availability.</p>
+    <div class="callout warn">No final selection has been made. This section reflects where the research stands, not a purchase decision.</div>
   </section>
 
   <section id="schematic">
@@ -202,7 +216,8 @@
       <li>Follow up with Madisound for a refund on the mis-listed 3.3Ω resistor</li>
       <li>Source replacement midrange pot for the right channel</li>
       <li>Track Vifa D19TD05-08 stock — order all 8 units once available</li>
-      <li>Enlarge baffle holes for the Vifa's 70mm cutout once tweeters are in hand (hole saw, not a router)</li>
+      <li>Decide between the Visaton TW70/TW6NG combo and the Vifa D19TD05-08 — nothing ordered yet</li>
+      <li>Once decided: enlarge baffle holes as needed for the chosen part(s) — likely minimal for the TW70 main position, more for either option on the super tweeter position (hole saw, not a router)</li>
       <li>Revisit the left/right woofer-mount mismatch if a router is ever acquired</li>
     </ul>
   </section>
