@@ -31,6 +31,7 @@
     <a href="#right">Right Channel</a>
     <a href="#left">Left Channel</a>
     <a href="#tweeters">Tweeter Replacement</a>
+    <a href="#removal">Removing Old Drivers</a>
     <a href="#schematic">Schematic</a>
     <a href="#open">Open Items</a>
   </nav>
@@ -114,32 +115,32 @@
     <div class="callout">Measured original baffle cutouts directly: super tweeter position is <span class="val">1⅞" (47.6mm)</span> — smaller than the "2 inch" nominal class name the MT-20 is sold under. Main tweeter position measures <span class="val">2.5" (63.5mm)</span> exactly. All cutout comparisons below are against these real measurements, not the rounded nominal sizes.</div>
 
     <table>
-      <caption>Candidates evaluated — nothing selected yet</caption>
+      <caption>Candidates evaluated — Visaton combo selected</caption>
       <thead><tr><th>Part</th><th>Ω</th><th>Sensitivity</th><th>Fs / min. Xover</th><th>Cutout</th><th>Status</th></tr></thead>
       <tbody>
-        <tr class="leading">
+        <tr class="chosen">
           <td><strong>Visaton TW70-8</strong> (main position)</td>
           <td>8Ω</td>
           <td>90dB</td>
           <td>Fs 1500Hz · min. xover 3000Hz</td>
           <td>64mm vs. real 63.5mm hole — <em>near-exact</em></td>
-          <td class="verdict-leading">Leading</td>
+          <td class="verdict-chosen">Chosen</td>
         </tr>
-        <tr class="leading">
+        <tr class="chosen">
           <td><strong>Visaton TW6NG8</strong> (super position)</td>
           <td>8Ω</td>
           <td>91dB</td>
           <td>Fs 1500Hz · min. xover 3000Hz</td>
           <td>56mm vs. real 47.6mm hole — needs enlarging</td>
-          <td class="verdict-leading">Leading</td>
+          <td class="verdict-chosen">Chosen</td>
         </tr>
-        <tr class="alternative">
+        <tr class="rejected">
           <td>Vifa / Peerless D19TD05-08</td>
           <td>8Ω</td>
           <td>87.5dB — closest match to original ~88.5dB</td>
           <td>Fs 1687Hz</td>
           <td>70mm — needs enlarging</td>
-          <td class="verdict-alternative">Alternative</td>
+          <td class="verdict-rejected">Passed over</td>
         </tr>
         <tr class="rejected">
           <td>Dayton DC28F-8</td>
@@ -183,17 +184,33 @@
     <div class="finding"><strong>Peerless CT-62</strong> — the most period-correct option and a genuinely live, active listing (99 sold, reputable seller) — but only available in 4Ω. Adding series resistance to compensate was considered but set aside as an imprecise fix without a verified target impedance to compensate against.</div>
     <div class="finding"><strong>Goldwood GT-25</strong> — ruled out outright: wrong size class (3.5" driver, 79mm cutout) and voiced for PA/DJ use, not hi-fi.</div>
 
-    <h3>Leading candidates: Visaton TW70-8 + TW6NG8 <span class="tag leading">leading — not yet decided</span></h3>
+    <h3>Decided: Visaton TW70-8 + TW6NG8 <span class="tag resolved">ordered</span></h3>
     <p>A two-part combo, matching the original design's two-size architecture rather than one uniform driver across all 8 positions. Same manufacturer and product family for both, giving consistent voicing between positions. The TW70's cutout (64mm) is a near-exact match to the measured 63.5mm main-tweeter hole — the best physical fit found for either position across the whole search, likely needing little to no enlargement. The TW6NG still needs some enlargement on the smaller position. Both currently in stock at Parts Express, versus Vifa's back-order.</p>
-    <p>Genuinely open questions before committing: cone material isn't explicitly stated on either datasheet (same ambiguity that affected other candidates). The two parts use different terminal sizes (4.8mm vs. 2.8mm spades), so different connectors are needed for each. The frequency-response graphs on both datasheets haven't been closely cross-checked against each other or against the originals' likely curve — the numbers above come from the tabulated specs, not a curve-by-curve comparison.</p>
+    <p>Also independently validated: a live 2026 Audiokarma thread on this exact speaker shows another owner separately arriving at the same TW70+TW6NG combo, plus a second poster suggesting Visaton generally — real third-party convergence on the same answer, reached independently.</p>
+    <p>Genuinely open items before installation: cone material isn't explicitly stated on either datasheet (same ambiguity that affected other candidates). The two parts use different terminal sizes (4.8mm vs. 2.8mm spades), so different connectors are needed for each. The frequency-response graphs on both datasheets haven't been closely cross-checked against each other or against the originals' likely curve — the numbers above come from the tabulated specs, not a curve-by-curve comparison.</p>
 
-    <h3>Remaining alternative: Vifa / Peerless D19TD05-08 <span class="tag decided">alternative</span></h3>
-    <p>Still a real option — closest sensitivity match to the originals (87.5dB vs. ~88.5dB) and the strongest brand pedigree (Vifa and Peerless are sister Danish companies, now under the same parent group), with real 5-star reviews from owners describing actual vintage-speaker restorations. Downside: larger cutout (70mm) than the Visaton combo needs on either position, and currently back-ordered until <strong>8/21</strong> versus the Visaton parts' in-stock availability.</p>
-    <div class="callout warn">No final selection has been made. This section reflects where the research stands, not a purchase decision.</div>
+    <h3>Passed over: Vifa / Peerless D19TD05-08</h3>
+    <p>Still a strong option — closest sensitivity match to the originals (87.5dB vs. ~88.5dB) and the strongest brand pedigree (Vifa and Peerless are sister Danish companies, now under the same parent group), with real 5-star reviews from owners describing actual vintage-speaker restorations. Passed over for a larger required cutout (70mm) than the Visaton combo needs on either position, and a back-order versus the Visaton parts' in-stock availability.</p>
+  </section>
+
+  <section id="removal">
+    <h2><span class="num">05</span> Removing the Old Drivers</h2>
+    <p>Not yet started — the originals are still in place, decision made and tweeters being ordered. Sourced from an Audiokarma thread of Rectilinear III owners describing their own driver removal, not yet tried firsthand on this pair.</p>
+
+    <h3>Tweeters</h3>
+    <div class="finding">Original adhesive is a thin bead of clear silicone, confirmed by multiple independent posters — matches what was already found gluing this pair's crossover board to the cabinet.</div>
+    <div class="finding">Best documented technique: run an X-acto knife around the outside edge first to sever the silicone bond, then work a paint scraper under the edge and tap it further in, working around the full perimeter. The driver then pops out cleanly.</div>
+    <div class="finding">A second poster used a wire saw successfully — but specifically clamped the wire in pencil clamps rather than holding it by hand, noting fingers are too big for the control needed. Worth remembering given the guitar-string wire-saw attempt on this project's own crossover glue got stuck from hand-held slack.</div>
+
+    <h3>Midrange</h3>
+    <div class="finding">More tedious than the tweeters — same cut/slice/pick approach, just repeated patiently around the basket until it lifts from its plastic cup chamber. Not relevant to this project's current tweeter-only replacement, but noted in case the midrange ever needs attention.</div>
+
+    <h3>Crossover (for reference)</h3>
+    <div class="finding">Independent confirmation that crossovers on this model are commonly glued in and removed with a putty knife, tapping and prying carefully to avoid flexing the board — the same problem this project solved differently by relocating the terminal strip rather than prying the full board loose.</div>
   </section>
 
   <section id="schematic">
-    <h2><span class="num">05</span> Reference Schematic</h2>
+    <h2><span class="num">06</span> Reference Schematic</h2>
     <p>Sourced from a Classic Speaker Pages forum post ("Rectilinear iii 1969"). Drawn in DesignWorks Lite, dated December 2006. This appears to be the only documentation of this network's actual topology to surface publicly — the same speaker has an active, unanswered "does anyone have the schematic" thread on Audio Asylum dating back to 2004.</p>
     <div class="schematic-frame">
       <img src="rectilinear-schematic.jpg" alt="Rectilinear III (1969) crossover schematic, showing woofer, midrange, and tweeter branches">
@@ -209,14 +226,14 @@
   </section>
 
   <section id="open">
-    <h2><span class="num">06</span> Open Items</h2>
+    <h2><span class="num">07</span> Open Items</h2>
     <ul class="open-items">
       <li>Complete left channel harness rebuild (mirroring right channel's completed work)</li>
       <li>Source correct 8Ω 10W Zobel resistor for the right channel woofer network</li>
       <li>Follow up with Madisound for a refund on the mis-listed 3.3Ω resistor</li>
       <li>Source replacement midrange pot for the right channel</li>
       <li>Track Vifa D19TD05-08 stock — order all 8 units once available</li>
-      <li>Decide between the Visaton TW70/TW6NG combo and the Vifa D19TD05-08 — nothing ordered yet</li>
+      <li><s>Order Visaton TW70-8 ×4 and TW6NG8 ×4 from Parts Express</s> — ordered</li>
       <li>Once decided: enlarge baffle holes as needed for the chosen part(s) — likely minimal for the TW70 main position, more for either option on the super tweeter position (hole saw, not a router)</li>
       <li>Revisit the left/right woofer-mount mismatch if a router is ever acquired</li>
     </ul>
